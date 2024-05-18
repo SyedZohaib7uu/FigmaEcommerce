@@ -6,115 +6,337 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link id="theme-link" rel="stylesheet" href="light-mode.css">
-    <style>
-        body {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .toggle-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Figma Ecommerce</title>
 </head>
 <body>
     <div class="mainop">
-        <form id="loginform">
-            <h1 style="font-size: 35px;font-weight: 840;">login</h1>  <br>
-            <input style=" outline: none; background-color: transparent; border: none; width: 60%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; font-size: 24px; border-bottom: 1.5px solid rgba(0, 0, 0, 0.702); transition: all ease-in-out 1.4s;" placeholder="email" id="emaill" type="email"><br><br>
-            <input style=" outline: none; border: none; width: 60%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; font-size: 24px; border-bottom: 1.5px solid rgba(0, 0, 0, 0.702); background-color: transparent; transition: all ease-in-out 1.4s;" placeholder="pass" id="passl" type="password"><br><br>
-            <button style="padding: 6px 17px;border-radius: 10px; background-color: black;color: white;" type="submit" id="loginbtn">LogIn</button><br>
+      
+      <form  id="loginform">
+          
+          
+                <h1 style="font-size: 35px;font-weight: 840;">login</h1>  <br>
+            <input style=" outline: none;
+            background-color: transparent;
+            border: none;
+            width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 24px;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.702);
+        transition: all ease-in-out 1.4s;" placeholder="email" id="emaill" type="email"><br><br>
+            <input style=" outline: none;
+            border: none;
+            width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 24px;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.702);
+        background-color: transparent;
+        transition: all ease-in-out 1.4s;" placeholder="pass"id="passl"  type="password"><br><br>
+            <button style="padding: 6px 17px;border-radius: 10px;  background-color: black;color: white;" type="submit" id="loginbtn">LogIn</button><br>
         </form>
         <form id="signform">
-            <h1 style="font-size: 35px;font-weight: 840;">signup</h1><br>
-            <input style=" outline: none; border: none; width: 60%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; font-size: 24px; background-color: transparent; border-bottom: 1.5px solid rgba(0, 0, 0, 0.702); transition: all ease-in-out 1.4s;" placeholder="name" id="names" type="name" required><br><br>
-            <input style=" outline: none; border: none; width: 60%; padding-top: 10px; background-color: transparent; padding-bottom: 10px; padding-left: 10px; font-size: 24px; border-bottom: 1.5px solid rgba(0, 0, 0, 0.702); transition: all ease-in-out 1.4s;" placeholder="email" id="emails" type="email" required><br><br>
-            <input style=" outline: none; border: none; width: 60%; padding-top: 10px; padding-bottom: 10px; background-color: transparent; padding-left: 10px; font-size: 24px; border-bottom: 1.5px solid rgba(0, 0, 0, 0.702); transition: all ease-in-out 1.4s;" placeholder="pass" id="passs" type="password" required><br><br>
-            <button style="padding: 6px 17px;border-radius: 10px; background-color: black;color: white;" type="submit" id="signbtn">Sign Up</button><br>
-        </form>
-        <div id="btnh"><br><br>
-            <button style="padding: 6px 17px;border-radius: 10px; background-color: black;color: white;" id="togle">Create New Account</button><br>
-            <button id="gbtn"><img style="padding-left: 20px;" width="50px" height="50px" src="./image.png" alt=""></button>
-        </div>
+            <h1  style="font-size: 35px;font-weight: 840;">signup</h1><br>
+            <input style=" outline: none;
+            border: none;
+            width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 24px;
+        background-color: transparent;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.702);
+        transition: all ease-in-out 1.4s;" placeholder="name" id="names" type="name" required><br><br>
+            <input style=" outline: none;
+            border: none;
+            width: 60%;
+            padding-top: 10px;
+            background-color: transparent;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            font-size: 24px;
+            border-bottom: 1.5px solid rgba(0, 0, 0, 0.702);
+            transition: all ease-in-out 1.4s;" placeholder="email" id="emails" type="email" required><br><br>
+            <input style=" outline: none;
+            border: none;
+            width: 60%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: transparent;
+            padding-left: 10px;
+        font-size: 24px;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.702);
+        transition: all ease-in-out 1.4s;" placeholder="pass" id="passs" type="password" required><br><br>
+            <button style="padding: 6px 17px;border-radius: 10px;  background-color: black;color: white;" type="submit"  id="signbtn">Sign Up</button><br>       </form>
+       <div id="btnh"><br><br>
+        <button style="padding: 6px 17px;border-radius: 10px;  background-color: black;color: white;" id="togle">Create New Account</button><br>
+        <button id="gbtn"><img style="padding-left: 20px;" width="50px" height="50px" src="./image.png" alt=""></button>
+        
+       </div>
     </div>
+</div>
+    <!-- home -->
     <div id="home">
+        
         <div class="header">
-            <p class="o">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50% <a style="color: white;font-weight: 800;letter-spacing: 2px;" href="">Shop Now</a></p>
-            <div class="dropdown">
-                <button style="font-weight: 790;" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    English
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Urdu</a></li>
-                    <li><a class="dropdown-item" href="#">German</a></li>
-                    <li><a class="dropdown-item" href="#">French</a></li>
-                </ul>
+            <p class="o">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%  <a style="color: white;font-weight: 800;letter-spacing: 2px;" href="">Shop Now</a></p>
+    <div class="dropdown">
+        <button style="font-weight: 790;" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+         English
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Urdu</a></li>
+          <li><a class="dropdown-item" href="#">German</a></li>
+          <li><a class="dropdown-item" href="#">French</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav">
+        <div class="onesection">
+<div class="logo">Ecommerce</div>
+        </div>
+        <div class="twosection">
+          
+          <ul>
+            <!-- <li class="hu" id="links active" > <i id="closenav" class="ri-close-circle-fill"></i></li> -->
+    <li><a href="">Home</a></li>
+    <li id="links active"><a href="">Contact</a></li>
+    <li id="links active"><a href="">About</a></li>
+  
+  
+</ul>
+        </div>
+        <div class="threesection">
+<!-- <input  id="navsearch" type="text" placeholder="What Are U Looking For?">
+<button id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+<button id="heartbtn" type="button" class="btn position-relative">
+    
+    <i class="fa-regular fa-heart"></i>
+    <span style="font-size: 15px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      99+
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>
+
+  <button id="cartbtn" type="button" class="btn position-relative">
+      <i class="fa-solid fa-cart-shopping"></i>
+    
+    <span  style="font-size: 15px;"  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      99+
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>
+  
+  
+  <div class="dropdown">
+      <button  id="profilebtn" style="font-weight: 790;" class="btn btn-light " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+       
+          <i class="fa-solid fa-circle-user"></i>
+             
+           
+       
+      
+        </button>
+        <ul style="text-align: center; padding-left: 8px;padding-right: 8px;" class="dropdown-menu">
+
+          <li><h3 id="demail"></h3></li>
+         <br><hr>
+         <br>
+           <li id="links active"><button style="border-radius: 20px; background-color: black; padding: 5px 10px;color: white; font-weight: 850;" id="logout">Logout</button></li>
+<br>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="forthsec">
+    <button  class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+
+      <i id="hun" style="color: black;" class="text-lg ri-menu-2-line"></i>
+    </button>
+    </div>
+  </div>
+
+
+      
+      <div class="homesec">
+        
+      <div class="home1">
+        <h1>Latest Iphone 16 ProMax</h1>
+        <h2>This Will Blow The Mind Of People.</h2>
+        <p id="hp">The iPhone 16, Apple's latest flagship smartphone, represents a significant leap in technology and design. Building on the success of its predecessors, the iPhone 16 introduces groundbreaking features that set new standards in the smartphone industry. One of the most notable advancements is the display technology. The iPhone 16 boasts a stunning Super Retina XDR display with ProMotion technology, offering a refresh rate of up to 120Hz. <p id="hpopen"></p></p><button id="hreadmorebtn" >ReadMore</button>
+      </div>
+      
+</div>
+
+
+<div class="flashsale">
+  <h1 id="rty" >Countdown For Sale <i style="color: #ff6b6b;" class="fa-solid fa-store"></i></h1>
+  <div class="timer">
+
+  <div id="countdown">
+    <div><span id="days"></span>Days</div>
+    <div><span id="hours"></span>Hours</div>
+    <div><span id="minutes"></span>Minutes</div>
+    <div><span id="seconds"></span>Seconds</div>
+  </div>
+  </div>
+<div id="saleproduct" class="w-full  bg-zinc-100 font-['gilroy']">
+  <h1 id="rtyy" >Sale Product<i style="color: #ff6b6b;" class="fa-solid fa-store"></i></h1>
+
+  <div class="saleallproducts whitespace-nowrap flex overflow-auto px-5 gap-5">
+   
+</div>
+  </div>
+    <div class="w-full min-h-screen bg-zinc-100 font-['gilroy']">
+        <div class="nav flex justify-between items-center px-5 py-5 relative">
+            <!-- <i class="text-lg ri-menu-2-line"></i>
+            <i class="carticon text-lg ri-shopping-bag-2-fill"></i> -->
+            <h1 id="rtyyy" >All Product</i></h1>
+
+            <div class="cartexpnd hidden w-52 bg-zinc-100 rounded-lg absolute top-[80%] right-5 flex flex-col gap-2">
+
             </div>
         </div>
-        <div class="nav">
-            <div class="onesection">
-                <div class="logo">Ecommerce</div>
+        <div class="input flex justify-between px-5 gap-2">
+            <input class="font-semibold capitalize px-4 py-3 rounded-lg w-full bg-zinc-200 outline-none" type="text"
+                placeholder="search">
+            <button class="px-4 py-3 text-white rounded-xl shader"><i class="ri-search-line"></i></button>
+        </div><br>
+        <button  id="equl" class="icon rounded-full px-6 shadow-xl shadow-black/40 py-5 shader text-yellow-400"><i class="ri-equalizer-fill"></i></button><br><br>
+        <div id="categoriessec" class="categories py-8 flex items-center gap-5 pl-5 whitespace-nowrap overflow-auto">
+            <div class="icon rounded-full px-6 shadow-xl shadow-black/40 py-5 shader text-yellow-400">
+                <i class="text-lg ri-home-2-line"></i>
             </div>
-            <div class="twosection">
-                <ul>
-                    <li id="links active"><a href="">Home</a></li>
-                    <li id="links active"><a href="">Contact</a></li>
-                    <li id="links active"><a href="">About</a></li>
-                </ul>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-scroll-to-bottom-line"></i>
             </div>
-            <div class="threesection">
-                <input id="navsearch" type="text" placeholder="What Are U Looking For?">
-                <button id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button id="heartbtn" type="button" class="btn position-relative">
-                    <i class="fa-regular fa-heart"></i>
-                    <span style="font-size: 15px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </button>
-                <button id="cartbtn" type="button" class="btn position-relative">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span style="font-size: 15px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </button>
-                <div class="dropdown">
-                    <button id="profilebtn" style="font-weight: 790;" class="btn btn-light " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-circle-user"></i>
-                    </button>
-                    <ul style="text-align: center;" class="dropdown-menu">
-                        <li><h3 id="demail"></h3></li>
-                        <li id="links active"><button id="toggle-button" class="toggle-button">Switch to Dark Mode</button></li>
-                        <li id="links active"><button style="border-radius: 20px; background-color: black; padding: 5px 10px;color: white; font-weight: 850;" id="logout">Logout</button></li>
-                    </ul>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-store-2-line"></i>
+            </div>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-bookmark-line"></i>
+            </div>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-global-line"></i>
+            </div>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-service-line"></i>
+            </div>
+            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+                <i class="text-lg ri-home-2-fill"></i>
+            </div>
+        </div>
+        <div class="products whitespace-nowrap flex overflow-auto px-5 gap-5">
+            <div class="product w-fit rounded-xl p-2 bg-white">
+                <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl"></div>
+                <div class="data w-full px-2 py-5">
+                    <h1 class="font-semibold text-xl leading-none tracking-tight">EJ 100 Ox Chair.</h1>
+                    <div class="flex justify-between w-full items-center mt-2">
+                        <div class="w-1/2">
+                            <h3 class="font-semibold opacity-20">Hangup data.</h3>
+                            <h4 class="font-semibold mt-2">$3,456</h4>
+                        </div>
+                        <button class="w-10 h-10 rounded-full shader text-yellow-400"><i
+                                class="ri-add-line"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product w-fit rounded-xl p-2 bg-white">
+                <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl"></div>
+                <div class="data w-full px-2 py-5">
+                    <h1 class="font-semibold text-xl leading-none tracking-tight">EJ 100 Ox Chair.</h1>
+                    <div class="flex justify-between w-full items-center mt-2">
+                        <div class="w-1/2">
+                            <h3 class="font-semibold opacity-20">Hangup data.</h3>
+                            <h4 class="font-semibold mt-2">$3,456</h4>
+                        </div>
+                        <button class="w-10 h-10 rounded-full bg-[#4A4563] text-yellow-400"><i
+                                class="ri-add-line"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="homesec"></div>
-    </div>
+        <div class="populardiv mt-5">
+            <h3 class="text-2xl pl-5 font-semibold">Popular</h3>
+            <div id="bapp" class="populars mt-5 flex whitespace-nowrap gap-5 overflow-auto w-full pl-5">
+                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="data py-2 w-full">
+                        <h1 class="leading-none font-semibold">Eyes Lounge</h1>
+                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20">Bisco Do Lobo</h4>
+                        <h4 class="mt-3 font-semibold text-zinc-500">$12,000</h4>
+                    </div>
+                </div>
+                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="data py-2 w-full">
+                        <h1 class="leading-none font-semibold">Eyes Lounge</h1>
+                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20">Bisco Do Lobo</h4>
+                        <h4 class="mt-3 font-semibold text-zinc-500">$12,000</h4>
+                    </div>
+                </div>
+                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    </div>
+                    </div>
+                 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="auth.js"></script>
-    <script src="app.js"></script>
-    <script>
-        document.getElementById('toggle-button').addEventListener('click', function() {
-            var themeLink = document.getElementById('theme-link');
-            var currentTheme = themeLink.getAttribute('href');
-            var newTheme = currentTheme === 'light-mode.css' ? 'dark-mode.css' : 'light-mode.css';
-            themeLink.setAttribute('href', newTheme);
-            this.textContent = newTheme === 'light-mode.css' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-        });
-    </script>
+
+
+
+
+
+
+
+
+<!-- navbar off canvas -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div style="background-color: black;" class="offcanvas-body">
+                        <ul>
+                          <!-- <li class="hu" id="links active" > <i id="closenav" class="ri-close-circle-fill"></i></li> -->
+                  <li style="  font-family: cursive;
+                  background:linear-gradient(90deg,#00dbde,#fc00ff);
+                  -webkit-background-clip:text;
+                  -webkit-text-fill-color:transparent; font-size: 50px;"><a href="">Home</a></li><br><br>
+                  <li style="  font-family: cursive;
+                  background:linear-gradient(90deg,#00dbde,#fc00ff);
+                  -webkit-background-clip:text;
+                  -webkit-text-fill-color:transparent; font-size: 50px;"><a href="">Contact</a></li><br><br>
+                  <li style="  font-family: cursive;
+                  background:linear-gradient(90deg,#00dbde,#fc00ff);
+                  -webkit-background-clip:text;
+                  -webkit-text-fill-color:transparent; font-size: 50px;"><a href="">About</a></li>
+               
+                
+                
+              </ul>
+                      </div>
+                    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script type="module" src="auth.js"></script>
+   <script src="app.js"></script>
 </body>
 </html>
