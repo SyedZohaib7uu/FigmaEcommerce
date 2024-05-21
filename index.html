@@ -116,22 +116,82 @@
 <button id="heartbtn" type="button" class="btn position-relative">
     
     <i class="fa-regular fa-heart"></i>
-    <span style="font-size: 15px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    <span id="redred" style="font-size: 15px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
       99+
       <span class="visually-hidden">unread messages</span>
     </span>
   </button>
 
-  <button id="cartbtn" type="button" class="btn position-relative">
+  <button id="cartbtn"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" class="btn position-relative">
       <i class="fa-solid fa-cart-shopping"></i>
     
-    <span  style="font-size: 15px;"  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      99+
+    <span id="rredred"  style="font-size: 15px;"   class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
       <span class="visually-hidden">unread messages</span>
     </span>
   </button>
+
+  <!-- cart model -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-zinc-300 font-['gilroy']">
+        <div class="modal-header">
+          <h1 style="
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(255, 128, 0) 24%, rgb(102, 52, 209) 100%);
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+     -webkit-background-clip:text;
+     -webkit-text-fill-color:transparent;
+     font-weight: 700;
+     font-size: 40px;
+         "class="modal-title fs-5" id="staticBackdropLabel">Your Cart</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="containercart" class="modal-body">
+       <h2 id="mk"><span style="
+         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,238,102,1) 24%, rgba(0,212,255,1) 100%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight: 700;
+    font-size: 40px;
+        ">Your Cart Is Empty</span> <i  style="color: #ff6b6b;"  id="rth" class="ri-shopping-bag-2-line"></i></h2>
+        <h4 id="mkk"><span style="
+         background:linear-gradient(90deg,#00dbde,#fc00ff);
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight: 700;
+  font-size: 36px;
+        ">Keep Shopping</span> <i  style="color: #f52929; font-size: 40px;"  id="rthh"  class="ri-shopping-cart-line"></i></h4>
+
+<!-- 
+
+<div class="capsole">
+
+
+
+
+        </div> -->
+        </div>
+
+
+
+
+
+
+        <div style="display: flex;
+        justify-content: center;" class="modal-footer">
+          <button id="paymentBtn" type="button" class="btn btn-danger" >Payment</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- cart model -->
+
   <div class="dropdown">
       <button  id="profilebtn" style="font-weight: 790;" class="btn btn-light " type="button" data-bs-toggle="dropdown" aria-expanded="false">
        
@@ -160,8 +220,6 @@
     </div>
   </div>
 
-
-      
       <div class="homesec">
         
       <div class="home1">
@@ -173,9 +231,10 @@
 </div>
 
 
+
 <div class="flashsale">
-  <h1 id="rty" >Countdown For Sale <i style="color: #ff6b6b;" class="fa-solid fa-store"></i></h1>
   <div class="timer">
+    <h1 id="rty" >Countdown For Sale <i style="color: #ff6b6b;" class="fa-solid fa-store"></i></h1>
 
   <div id="countdown">
     <div><span id="days"></span>Days</div>
@@ -191,108 +250,63 @@
    
 </div>
   </div>
-    <div class="w-full min-h-screen bg-zinc-100 font-['gilroy']">
+    <div class="w-full bg-zinc-100 font-['gilroy']">
         <div class="nav flex justify-between items-center px-5 py-5 relative">
             <!-- <i class="text-lg ri-menu-2-line"></i>
             <i class="carticon text-lg ri-shopping-bag-2-fill"></i> -->
-            <h1 id="rtyyy" >All Product</i></h1>
-
-            <div class="cartexpnd hidden w-52 bg-zinc-100 rounded-lg absolute top-[80%] right-5 flex flex-col gap-2">
-
+            
+            <div style="width: 100%;text-align: center;" class="s">
+              
+              <h1 id="rtyyy">All Product</i></h1>
             </div>
-        </div>
-        <div class="input flex justify-between px-5 gap-2">
-            <input class="font-semibold capitalize px-4 py-3 rounded-lg w-full bg-zinc-200 outline-none" type="text"
+          </div>
+          <div class="input flex justify-between px-5 gap-2">
+            <input id="searchs" class="font-semibold capitalize px-4 py-3 rounded-lg w-full bg-zinc-200 outline-none" type="text"
                 placeholder="search">
             <button class="px-4 py-3 text-white rounded-xl shader"><i class="ri-search-line"></i></button>
-        </div><br>
+           
+        </div>
+        <div class="sa">
+          <div class="hidden searchdata w-[98%] min-h-0 bg-white absolute  left-1/2 -translate-x-1/2 rounded-md py-3">
+                        
+          </div>
+        </div>
+       <br>
         <button  id="equl" class="icon rounded-full px-6 shadow-xl shadow-black/40 py-5 shader text-yellow-400"><i class="ri-equalizer-fill"></i></button><br><br>
         <div id="categoriessec" class="categories py-8 flex items-center gap-5 pl-5 whitespace-nowrap overflow-auto">
-            <div class="icon rounded-full px-6 shadow-xl shadow-black/40 py-5 shader text-yellow-400">
-                <i class="text-lg ri-home-2-line"></i>
+            <div id="menu" class="icon rounded-full shadow-xl shadow-slate/20 px-5 py-4">
+              <h3>Men</h3>
+
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-scroll-to-bottom-line"></i>
+            <div id="womenu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <h3>Women</h3>
+
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-store-2-line"></i>
+            <div  id="chu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <h3>Child</h3>
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-bookmark-line"></i>
+            <div id="tvu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <i class="ri-tv-2-line"></i>
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-global-line"></i>
+            <div id="mobu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <i class="ri-smartphone-line"></i>
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-service-line"></i>
+            <div id="lapu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <i class="ri-macbook-line"></i>
             </div>
-            <div class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
-                <i class="text-lg ri-home-2-fill"></i>
+            <div id="headu" class="icon rounded-full shadow-md shadow-slate/10 px-5 py-4">
+              <i class="ri-headphone-line"></i>
             </div>
         </div>
-        <div class="products whitespace-nowrap flex overflow-auto px-5 gap-5">
-            <div class="product w-fit rounded-xl p-2 bg-white">
-                <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl"></div>
-                <div class="data w-full px-2 py-5">
-                    <h1 class="font-semibold text-xl leading-none tracking-tight">EJ 100 Ox Chair.</h1>
-                    <div class="flex justify-between w-full items-center mt-2">
-                        <div class="w-1/2">
-                            <h3 class="font-semibold opacity-20">Hangup data.</h3>
-                            <h4 class="font-semibold mt-2">$3,456</h4>
-                        </div>
-                        <button class="w-10 h-10 rounded-full shader text-yellow-400"><i
-                                class="ri-add-line"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="product w-fit rounded-xl p-2 bg-white">
-                <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl"></div>
-                <div class="data w-full px-2 py-5">
-                    <h1 class="font-semibold text-xl leading-none tracking-tight">EJ 100 Ox Chair.</h1>
-                    <div class="flex justify-between w-full items-center mt-2">
-                        <div class="w-1/2">
-                            <h3 class="font-semibold opacity-20">Hangup data.</h3>
-                            <h4 class="font-semibold mt-2">$3,456</h4>
-                        </div>
-                        <button class="w-10 h-10 rounded-full bg-[#4A4563] text-yellow-400"><i
-                                class="ri-add-line"></i></button>
-                    </div>
-                </div>
-            </div>
+        <div id="allp" class="products whitespace-nowrap flex overflow-auto px-5 gap-5">
+            
+           
         </div>
         <div class="populardiv mt-5">
-            <h3 class="text-2xl pl-5 font-semibold">Popular</h3>
+            <h3 id="rtyyyy" class="text-2xl pl-5 font-semibold">Our Popular</h3>
             <div id="bapp" class="populars mt-5 flex whitespace-nowrap gap-5 overflow-auto w-full pl-5">
-                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-                        <img class="w-full h-full object-cover"
-                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="">
-                    </div>
-                    <div class="data py-2 w-full">
-                        <h1 class="leading-none font-semibold">Eyes Lounge</h1>
-                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20">Bisco Do Lobo</h4>
-                        <h4 class="mt-3 font-semibold text-zinc-500">$12,000</h4>
-                    </div>
-                </div>
-                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-                        <img class="w-full h-full object-cover"
-                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="">
-                    </div>
-                    <div class="data py-2 w-full">
-                        <h1 class="leading-none font-semibold">Eyes Lounge</h1>
-                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20">Bisco Do Lobo</h4>
-                        <h4 class="mt-3 font-semibold text-zinc-500">$12,000</h4>
-                    </div>
-                </div>
-                <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-                        <img class="w-full h-full object-cover"
-                            src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=3412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="">
-                    </div>
+             
+                 
                     </div>
                     </div>
                  
@@ -331,12 +345,42 @@
               </ul>
                       </div>
                     </div>
+
+                    <!-- kbubj -->
+
+                    <!-- Button trigger modal -->
+
+                    <!-- kbubj -->
+                    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+                    <!-- kbubj -->
+
+                 
+                        
+                     
+
+
+                    </div>
+                   
+                  </div>
+              </div>
+         
+  <!-- Modal -->
+  
+  
+                    
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script type="module" src="auth.js"></script>
-   <script src="app.js"></script>
+   <script src="app.js">
+   
+   </script>
+
 </body>
 </html>

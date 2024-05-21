@@ -51,7 +51,7 @@ const carts = [
     {
         "idx": 5,
         "id": 50,
-        "title": "Men1",
+        "title": "Men5",
         "gender": "men",
         "img": "./images/m5.jpeg",
         "price": 490,
@@ -245,11 +245,11 @@ const carts = [
         "id": 210,
         "title": "Mobile1",
         "gender": "mobile",
-        "img": "./images/m1.jpeg",
+        "img": "./images/mo1.jpeg",
         "price": 100,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
-        "sideimg": "./images/ms1.jpeg",
+        "sideimg": "./images/mos1.jpeg",
         "discount": 39
     },
     {
@@ -257,11 +257,11 @@ const carts = [
         "id": 220,
         "title": "Mobile2",
         "gender": "mobile",
-        "img": "./images/m2.jpeg",
+        "img": "./images/mo2.jpeg",
         "price": 120,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
-        "sideimg": "./images/ms2.jpeg",
+        "sideimg": "./images/mos2.jpeg",
         "discount": 19
     },
     {
@@ -269,11 +269,11 @@ const carts = [
         "id": 230,
         "title": "Mobile3",
         "gender": "mobile",
-        "img": "./images/m3.jpeg",
+        "img": "./images/mo3.jpeg",
         "price": 1080,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
-        "sideimg": "./images/ms3.jpeg",
+        "sideimg": "./images/mos3.jpeg",
         "discount": 38
     },
     {
@@ -281,11 +281,11 @@ const carts = [
         "id": 240,
         "title": "Mobile4",
         "gender": "mobile",
-        "img": "./images/m4.jpeg",
+        "img": "./images/mo4.jpeg",
         "price": 3100,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
-        "sideimg": "./images/ms4.jpeg",
+        "sideimg": "./images/mos4.jpeg",
         "discount": 69
     },
     {
@@ -293,11 +293,11 @@ const carts = [
         "id": 250,
         "title": "Mobile5",
         "gender": "mobile",
-        "img": "./images/m5.jpeg",
+        "img": "./images/mo5.jpeg",
         "price": 1050,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
-        "sideimg": "./images/ms5.jpeg",
+        "sideimg": "./images/mos5.jpeg",
         "discount": 59
     },
     {
@@ -427,7 +427,7 @@ var saleproduct = [
         "id": 1110,
         "title": "Men1",
         "gender": "men",
-        "img": "./images/m1.jpeg",
+        "img": "./images/m4.jpeg",
         "price": 190,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -439,7 +439,7 @@ var saleproduct = [
         "id": 1120,
         "title": "Men2",
         "gender": "men",
-        "img": "./images/m2.jpeg",
+        "img": "./images/m5.jpeg",
         "price": 10,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -524,7 +524,7 @@ var saleproduct = [
         "id": 1190,
         "title": "Mobile3",
         "gender": "mobile",
-        "img": "./images/m3.jpeg",
+        "img": "./images/mo3.jpeg",
         "price": 1080,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -536,7 +536,7 @@ var saleproduct = [
         "id": 1120,
         "title": "Mobile4",
         "gender": "mobile",
-        "img": "./images/m4.jpeg",
+        "img": "./images/mo4.jpeg",
         "price": 3100,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -696,7 +696,7 @@ var popularproduct =[
         "id": 11190,
         "title": "Mobile3",
         "gender": "mobile",
-        "img": "./images/m1.jpeg",
+        "img": "./images/mo1.jpeg",
         "price": 1080,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -708,7 +708,7 @@ var popularproduct =[
         "id": 11120,
         "title": "Mobile4",
         "gender": "mobile",
-        "img": "./images/m1.jpeg",
+        "img": "./images/mos1.jpeg",
         "price": 3100,
         "dec": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
         "like": 0,
@@ -765,7 +765,12 @@ var popularproduct =[
         "discount": 99
     },
 ]
-console.log(carts);
+// console.log(carts);
+
+var addToBtn =  document.getElementById("addTo");
+
+
+
 var th = 0
 var hreadmorebtn = document.getElementById("hreadmorebtn")
 hreadmorebtn.addEventListener("click",()=>{
@@ -837,10 +842,10 @@ equl.addEventListener("click",()=>{
 
 function displayProductSale(){
     var clu = "";
-    saleproduct.forEach(item=>{
+    saleproduct.forEach(function(item){
         clu+=`
         <div class="product w-fit rounded-xl p-2 bg-white">
-        <div class="image w-[14rem] h-[14rem] bg-zinc-200 rounded-xl"><img src="${item.img}" /></div>
+        <div id="ut" class="image w-[14rem] h-[14rem] bg-zinc-200 rounded-xl"><img src="${item.img}" /></div>
         <div class="data w-full px-2 py-5">
             <h1 class="font-semibold text-xl leading-none tracking-tight">${item.title}</h1>
             <div class="flex justify-between w-full items-center mt-2">
@@ -848,32 +853,129 @@ function displayProductSale(){
                     
                     <h4 class="font-semibold mt-2">Rs. ${item.price}</h4>
                 </div>
-                <button class="w-10 h-10 rounded-full shader text-yellow-400"><i
+                <button onclick="addToCart('${item.img}', ${item.price}, '${item.title}')" id="addTo"  class="w-10 h-10 rounded-full shader text-yellow-400"><i
                         class="ri-add-line"></i></button>
             </div><br>
-            <button style="font-weight="750" class="w-40 h-10 rounded-full shader text-yellow-600">Check</button>
+            
+            <button id="qwe" data-bs-toggle="modal" data-bs-target="#exampleModal${item.idx}"     style="font-weight="750" class="w-40 h-10 rounded-full shader text-yellow-600">Check</button>
         </div>
+
     </div>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal${item.idx}"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="width: 100%;display: flex;justify-content: space-between; padding-top: 10px;" class="kjh">
+          <h1></h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">${item.title}</h1>
+              <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+      </div>
+      <div style="width: 100%;" class="modal-body">
+        <div style="display: flex;justify-content: center;align-items: center;"  class="card">
+          <img src="${item.img}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5  style="font-size: 40px; background:linear-gradient(90deg,#00dbde,#fc00ff);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            font-weight: 750; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="card-title">${item.title}</h5>
+           <h2><span style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Discount ${item.discount}%<br><span style="font-size: 30px;color: rgb(0, 255, 0); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><ins>Rs. ${item.price}</ins></span></span></h2>
+        
+    
+     
+       
+           <i style=" background: linear-gradient(90deg, rgb(151, 20, 3) 0%, rgb(238, 81, 89) 24%, rgb(255, 0, 72) 100%);
+           font-family: cursive;
+         
+           -webkit-background-clip:text;
+           -webkit-text-fill-color:transparent;
+           font-weight: 700;
+           font-size: 50px;" class="ri-heart-line"></i>
+             <br><br>
+             <br>
+             <button  id="addTo" onclick="addToCart('${item.img}', ${item.price}, '${item.title}')" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: rgb(241, 241, 4);font-weight: 750;font-size: 30px;border-radius: 20px; text-align: center;
+             "  class="w-40 h-10 shader">Buy Now</button><br>
+            
+            
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
         `
     })
     var baaap = document.querySelector(".saleallproducts").innerHTML=clu;
 }
+
+
 function displayProductPopular(){
     var clutt = "";
-    saleproduct.forEach(items=>{
+    popularproduct.forEach(function(items){
         clutt+=`
         <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-        <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-            <img class="w-full h-full object-cover"
-                src="${items.img}"
-                alt="">
-        </div>
-        <div class="data py-2 w-full">
-            <h1 class="leading-none font-semibold">${items.title}</h1>
+                <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="${items.img}"
+                        alt="">
+                </div>
+                <div class="data py-2 w-full">
+                    <h1 class="leading-none font-semibold">${items.title}</h1>
+                    
+                    <h4 class="mt-3 font-semibold text-zinc-500">Rs. ${items.price}</h4>
+                    <br>    <button  id="qwe" data-bs-toggle="modal" data-bs-target="#exampleModal${items.idx}"      style="font-weight: 750" class="w-40 h-10 rounded-full shader text-yellow-600">Check</button>
+                </div>
+            </div><br>
            
-            <h4 class="mt-3 font-semibold text-zinc-500">Rs. ${items.price}</h4>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal${items.idx}"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="width: 100%;display: flex;justify-content: space-between; padding-top: 10px;" class="kjh">
+          <h1></h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">${items.title}</h1>
+              <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+      </div>
+      <div style="width: 100%;" class="modal-body">
+        <div style="display: flex;justify-content: center;align-items: center;"  class="card">
+          <img src="${items.img}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5  style="font-size: 40px; background:linear-gradient(90deg,#00dbde,#fc00ff);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            font-weight: 750; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="card-title">${items.title}</h5>
+           <h2><span style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Discount ${items.discount}%<br><span style="font-size: 30px;color: rgb(0, 255, 0); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><ins>Rs. ${items.price}</ins></span></span></h2>
+        
+    
+     
+       
+           <i style=" background: linear-gradient(90deg, rgb(151, 20, 3) 0%, rgb(238, 81, 89) 24%, rgb(255, 0, 72) 100%);
+           font-family: cursive;
+         
+           -webkit-background-clip:text;
+           -webkit-text-fill-color:transparent;
+           font-weight: 700;
+           font-size: 50px;" class="ri-heart-line"></i>
+             <br><br>
+             <br>
+             <button  id="addTo" onclick="addToCart('${items.img}', ${items.price}, '${items.title}')" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: rgb(241, 241, 4);font-weight: 750;font-size: 30px;border-radius: 20px; text-align: center;
+             "  class="w-40 h-10 shader">Buy Now</button><br>
+            
+            
+          </div>
         </div>
+      </div>
+     
     </div>
+  </div>
+</div>
         `
     })
       document.querySelector("#bapp").innerHTML=clutt;
@@ -882,10 +984,280 @@ function displayProductPopular(){
 
 
 
+function filter(){
+    // var ap = document.getElementById("op")
+    // var allc = document.getElementById("allc")
+    var mc =document.getElementById("menu")
+    var wc =document.getElementById("womenu")
+    var cc =document.getElementById("chu")
+    var tvc =document.getElementById("tvu")
+    var mobc =document.getElementById("mobu")
+    var headc =document.getElementById("headu")
+    var lapc =document.getElementById("lapu")
+    
+    mc.addEventListener("click",function(){
+        console.log("ok");
+      mencloth = carts.filter(p=>p.gender==="men")
+      displayAllProduct(mencloth)
+    })
+    wc.addEventListener("click",function(){
+      womencloth = carts.filter(p=>p.gender==="women")
+      displayAllProduct(womencloth)
+    })
+    cc.addEventListener("click",function(){
+      childcloth = carts.filter(p=>p.gender==="child")
+      displayAllProduct(childcloth)
+    })
+    tvc.addEventListener("click",function(){
+      childcloth = carts.filter(p=>p.gender==="tv")
+      displayAllProduct(childcloth)
+    })
+    mobc.addEventListener("click",function(){
+      childcloth = carts.filter(p=>p.gender==="mobile")
+      displayAllProduct(childcloth)
+    })
+    headc.addEventListener("click",function(){
+      childcloth = carts.filter(p=>p.gender==="head")
+      displayAllProduct(childcloth)
+    })
+    lapc.addEventListener("click",function(){
+      childcloth = carts.filter(p=>p.gender==="laptop")
+      displayAllProduct(childcloth)
+    })
+    displayAllProduct(carts)
+}
+// Define the function to display all products
+function displayAllProduct(pro=carts) {
+    var clutter = "";
+    pro.forEach(function(item)  {
+        clutter += `
+            <div class="product w-fit rounded-xl p-2 bg-white">
+                <div id="ut" class="image w-[14rem] h-[14rem] bg-zinc-200 rounded-xl"><img src="${item.img}" /></div>
+                <div class="data w-full px-2 py-5">
+                    <h1 class="font-semibold text-xl leading-none tracking-tight">${item.title}</h1>
+                    <div class="flex justify-between w-full items-center mt-2">
+                        <div class="w-1/2">
+                            <h4 class="font-semibold mt-2">Rs. ${item.price}</h4>
+                        </div>
+                        <button onclick="addToCart('${item.img}', ${item.price}, '${item.title}')" class="w-10 h-10 rounded-full shader text-yellow-400"><i class="ri-add-line"></i></button>
+                    </div><br>
+                    <button  id="qwe" data-bs-toggle="modal" data-bs-target="#exampleModal${item.idx}"      style="font-weight: 750" class="w-40 h-10 rounded-full shader text-yellow-600">Check</button>
+                    </div></div>
+       
+<!-- Modal -->
+<div class="modal fade" id="exampleModal${item.idx}"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="width: 100%;display: flex;justify-content: space-between; padding-top: 10px;" class="kjh">
+          <h1></h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">${item.title}</h1>
+              <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+      </div>
+      <div style="width: 100%;" class="modal-body">
+        <div style="display: flex;justify-content: center;align-items: center;"  class="card">
+          <img src="${item.img}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5  style="font-size: 40px; background:linear-gradient(90deg,#00dbde,#fc00ff);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            font-weight: 750; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="card-title">${item.title}</h5>
+           <h2><span style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Discount ${item.discount}%<br><span style="font-size: 30px;color: rgb(0, 255, 0); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><ins>Rs. ${item.price}</ins></span></span></h2>
+        
+    
+     
+       
+           <i style=" background: linear-gradient(90deg, rgb(151, 20, 3) 0%, rgb(238, 81, 89) 24%, rgb(255, 0, 72) 100%);
+           font-family: cursive;
+         
+           -webkit-background-clip:text;
+           -webkit-text-fill-color:transparent;
+           font-weight: 700;
+           font-size: 50px;" class="ri-heart-line"></i>
+             <br><br>
+             <br>
+             <button  id="addTo" onclick="addToCart('${item.img}', ${item.price}, '${item.title}')"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: rgb(241, 241, 4);font-weight: 750;font-size: 30px;border-radius: 20px; text-align: center;
+             "  class="w-40 h-10 shader">Buy Now</button><br>
+            
+            
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+        `;
+    });
+
+    // Set the HTML content to display all products
+    document.querySelector("#allp").innerHTML = clutter;
+}
+
+// Define the shopping cart array and counter
 
 
+// Note: the functionality start yahan se ye sari chezen ase hain but update cart function 
+// ke neche wali li btn jese chizen wahn likhni hain 
+// ah tiyat
 
 
+var valcart = []; // Initialize an empty array to store cart items
+var counter =0
+function addToCart(img,pri,ti) {
+      
+      counter = counter + 1; // Increment counter
+      document.getElementById("rredred").innerHTML = counter; // Update counter display
+  
+      // Create a new item object for the cart
+      var addCart = {
+    img:img,
+    pri:pri,
+    ti:ti
+   }
+   valcart = [
+    ...valcart,addCart
+   ]
+   
+   updateCartDisplay()
+  }
+  
+  // Clear previous cart display
+  var cartContainer = document.getElementById("containercart");
+  
+  function updateCartDisplay() {
+    document.getElementById("paymentBtn").style.display = "block";
+  var totalAmount =0
+cartContainer.innerHTML=""
+  // Iterate over the cart array and display each item
+  valcart.forEach(function(item) {
+    totalAmount = totalAmount+item.pri
+      var itemElement = document.createElement("div");
+      itemElement.innerHTML += `
+      
+      <div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                    <img class="w-full h-full object-cover" src="${item.img}" alt="">
+                </div>
+                <div class="data py-2 w-full">
+                    <h1 class="leading-none font-semibold">${item.ti}</h1>
+                    <h4 class="mt-3 font-semibold text-zinc-500">Rs. ${item.pri}</h4>
+                </div>
+            </div>
+            <br>
+        `;
+        cartContainer.appendChild(itemElement);
+      });
+      var totalElement = document.createElement("div");
+    totalElement.textContent = `Total Amount: Rs.${totalAmount}`;
+    cartContainer.appendChild(totalElement);
+
+    // Add payment button
+    var paymentButton = document.getElementById("paymentBtn");
+   
+    // paymentButton.id = "mita";
+    paymentButton.onclick = function() {
+      counter=0
+      document.getElementById("rredred").innerHTML = counter;
+      // Call function to handle payment
+      valcart = [];
+      // Update the cart display
+      console.log("pop");
+      updateCartDisplay();
+      cartContainer.innerHTML=""
+      paymentButton.style.display="none";
+
+      cartContainer.innerHTML=`
+      <h2 id="mk"><span style="
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,238,102,1) 24%, rgba(0,212,255,1) 100%);
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+ font-weight: 700;
+ font-size: 40px;
+     ">Your Cart Is Empty</span> <i  style="color: #ff6b6b;"  id="rth" class="ri-shopping-bag-2-line"></i></h2>
+     <h4 id="mkk"><span style="
+      background:linear-gradient(90deg,#00dbde,#fc00ff);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+font-weight: 700;
+font-size: 36px;
+     ">Keep Shopping</span> <i  style="color: #f52929; font-size: 40px;"  id="rthh"  class="ri-shopping-cart-line"></i></h4>
+
+      `
+    };
+    // cartContainer.appendChild(paymentButton);
+
+}
+
+
+// lopo
+
+
+function Coung(){
+    var val = document.getElementById("vali").value=0
+    valcart.forEach(function(item){
+var quan = item.quantity
+        function plus(){quan++}
+        function minus(){if(val===1){
+          alert("delete item")
+        }else{
+          quan--
+        }
+        }
+    })
+}
+
+var input =document.getElementById("searchs")
+var searchdata=document.querySelector(".searchdata")
+
+    input
+    .addEventListener("input", function(){
+        const filteredArray = carts.filter(obj => obj.title.toLowerCase().startsWith(input.value));
+        var clutter = "";
+        filteredArray.forEach(function(obj){
+            clutter += `<div onclick="searchLine('${obj.img}', ${obj.price},${obj.id}, '${obj.title}')"  style="cursor:pointer; " class="res flex px-8 py-3">
+            <i class="ri-search-line font-semibold mr-5"></i>
+            <h3 class="font-semibold">${obj.title}</h3>
+            </div>`
+        })
+        document.querySelector(".searchdata").style.display = "block";
+        document.querySelector(".searchdata").innerHTML = clutter;
+        console.log("li");
+        if (input.value === "") {
+            searchdata.style.display = "none"; // Hide the search results if input value is empty
+            return; // Exit the function early
+        }
+    })
+   
+   var searchline = document.getElementById("searchLine")
+
+   function searchLine(a,b,c,d) {
+    input.value=""
+    console.log("Clicked suggestion:", a,b,c,d); // Just for debugging
+    
+    // Filter the carts array based on the clicked suggestion
+    const linefilter = carts.filter(p => p.id === c);
+    
+    // Hide the search data
+    const searchdata = document.querySelector(".searchdata");
+    searchdata.style.display = "none";
+    
+    // Display the products related to the clicked suggestion
+   var dfg= document.getElementById("allp")
+   dfg.style.display="flex"
+   dfg.style.justifyContent="center"
+    displayAllProduct(linefilter);
+
+}
+
+
+filter()
+displayAllProduct();
 displayProductPopular()
 displayProductSale()
-

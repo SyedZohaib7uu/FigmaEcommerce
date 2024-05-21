@@ -167,7 +167,6 @@ font-size: 30px;
 .homesec{
     width: 100%;
     height: 40%;
-    background-color: black;
 user-select: none;
 display: flex;justify-content: center;
 align-items: center;
@@ -200,8 +199,8 @@ font-weight: 750;
     font-size: 40px;
 }
 #hreadmorebtn{
-    border-radius: 20px; background-color: black; padding: 5px 10px;color: white; font-weight: 850;
-    border: 1.5px solid white;
+    border-radius: 20px; background-color: white; padding: 5px 10px;color: black; font-weight: 850;
+    border: 1.5px solid black;
     transition: all ease-in-out 0.5s;
 
 }
@@ -209,10 +208,12 @@ font-weight: 750;
     /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,238,102,1) 24%, rgba(0,212,255,1) 100%);
 
 color: white; */
-background: white;
-color: black;
+background: black;
+color: white;
 }
-
+#hp{
+    color: black;
+}
 
 
 .timer {
@@ -245,12 +246,20 @@ color: black;
     padding-top: 20px;
     text-align: center;
 }
-#rtyy,#rty,#rtyyy{
+#rtyy,#rty,#rtyyy,#rtyyyy{
     font-size: 40px; font-weight: 700; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-align: center;
+}
+#rth,rthh{
+    font-size: 40px; font-weight: 700; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-align: center;
 }
 
 
-
+#ut{
+    object-fit: cover;
+overflow: hidden;
+}
 
 
 
@@ -324,30 +333,61 @@ font-size: 12px;
     display: none;
 }
 .nav{
+    width: 100%;
     display: flex;
-    padding-top: 7px;
+    /* background-color: red; */
+    height: 60px;
     justify-content: space-between;
-    align-items: center;
     align-items: center;
     padding-right: 5px;
   }
   .onesection {
     width: 40%;
+    padding-top: 10px;
 }
 .onesection .logo{
       font-size: 25px;
 
   }
   .threesection {
+    padding-top: 10px;
     width: 40%;
     text-align: center;
-    padding-top: 10px;
   }
   
   .forthsec {
     width: 20%;
     text-align: right;
+    padding-bottom: 10px;
   }
+  .forthsec i{
+font-size: 20px;
+  }
+  #heartbtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+font-size: 20px;
+padding-bottom: 40px;
+}
+#cartbtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+padding-bottom: 40px;
+font-size: 20px;
+}
+#profilebtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+padding-bottom: 30px;
+font-size: 20px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;align-items: center;
+}
 }
 @media screen and (max-width: 1076px) {
   .onesection .logo{
@@ -412,4 +452,21 @@ width: 100%;
 
 
 }
+}
+@media screen and (max-width: 815px) {
+    #redred{
+        background-color: blue;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+    }
+    #rredred{
+        background-color: blue;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+    }
+}
+#paymentBtn{
+    display: none;
 }
