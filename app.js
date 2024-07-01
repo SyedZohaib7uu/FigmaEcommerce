@@ -816,8 +816,8 @@ var countdownFunction = setInterval(function() {
     if (distance < 0) {
         clearInterval(countdownFunction);
         document.getElementById("countdown").innerHTML = "SALE ENDED";
-        document.getElementById("countdown").style.fontSize = "34"+px;
-        document.getElementById("countdown").style.fontWeight = "750"+px;
+        document.getElementById("countdown").style.fontSize = "34px";
+        document.getElementById("countdown").style.fontWeight = "750";
         document.querySelector("#saleproduct").innerHTML = ""; 
 
     }
